@@ -3,10 +3,12 @@ package org.dsit.gestionIftar.security;
 import java.io.IOException;
 import java.util.Date;
 
+
 import org.dsit.gestionIftar.entities.AppUser;
 import org.springframework.security.authentication.*;
 import org.springframework.security.core.*;
-
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -14,6 +16,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import javax.persistence.*;
 import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
